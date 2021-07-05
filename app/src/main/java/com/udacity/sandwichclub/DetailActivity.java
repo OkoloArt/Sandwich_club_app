@@ -65,15 +65,15 @@ public class DetailActivity extends AppCompatActivity {
 
     private void populateUI(Sandwich sandwich) {
 
-        TextView alsoKnownAs =findViewById(R.id.also_known_tv);
-        TextView ingredients=findViewById(R.id.ingredients_tv);
-        TextView placeOfOrigin=findViewById(R.id.origin_tv);
-        TextView description=findViewById(R.id.description_tv);
+        TextView alsoKnownAs = findViewById(R.id.also_known_tv);
+        TextView ingredients = findViewById(R.id.ingredients_tv);
+        TextView placeOfOrigin = findViewById(R.id.origin_tv);
+        TextView description = findViewById(R.id.description_tv);
 
         placeOfOrigin.setText(sandwich.getPlaceOfOrigin());
         description.setText(sandwich.getDescription());
-        alsoKnownAs.setText(TextUtils.join(",",sandwich.getAlsoKnownAs()));
-        ingredients.setText(TextUtils.join(",",sandwich.getIngredients()));
+        alsoKnownAs.setText(TextUtils.join(",", sandwich.getAlsoKnownAs()));
+        ingredients.setText(TextUtils.join(",\n", sandwich.getIngredients()));
 
     }
 }
